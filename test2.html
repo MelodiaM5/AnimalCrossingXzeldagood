@@ -106,6 +106,15 @@ loaderRubis.load( '3D_test/rubis_zelda/scene.gltf', function ( gltf ) {
     scene.add(rubis);
 });
 
+loaderRubis.load( '3D_test/among_us_character/scene.gltf', function ( gltf ) {
+    var rubis = gltf.scene;
+    rubis.scale.set(0.01, 0.01, 0.01);
+    rubis.position.x = -10;
+	rubis.position.y = 10;
+	rubis.position.z = -10;
+    scene.add(rubis);
+});
+
 
 const axesHelper = new THREE.AxesHelper( 5 );
 scene.add( axesHelper );
