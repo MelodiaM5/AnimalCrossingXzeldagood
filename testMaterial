@@ -1,0 +1,11 @@
+let loader = new THREE.GLTFLoader();
+
+loader.load('Objects/MyBox.gltf', (gltf) => {
+
+let box = gltf.scene;
+
+box.traverse((child) => {
+                        if (child.isMesh) child.material = boxMaterial; // a material i created in the code earlier
+                    });
+                    scene.add(box);
+                });
